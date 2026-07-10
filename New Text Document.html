@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayan Contracting & Trading | شركة بيان للمقاولات</title>
+    <style>
+        /* Global Styles & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #fcfbfa;
+        }
+        
+        /* Premium Metallic Bronze Palette */
+        :root {
+            --primary-metallic: #5c3a21;  /* Deep Metallic Bronze */
+            --accent-bronze: #8c6239;     /* Warm Metallic Gold/Bronze */
+            --dark-charcoal: #2b2b2b;     /* Charcoal Black text */
+            --stone-bg: #eae6e1;          /* Warm Stone Backdrop color from your design */
+            --light-cream: #f4f0ec;       /* Soft Cream accent background */
+        }
+
+        /* Clean Header Navigation */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-section .en-logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-metallic);
+            letter-spacing: 1px;
+        }
+        .logo-section .ar-logo {
+            font-size: 16px;
+            color: var(--dark-charcoal);
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav ul a {
+            text-decoration: none;
+            color: var(--dark-charcoal);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul a:hover {
+            color: var(--accent-bronze);
+        }
+
+        /* Hero Banner - Recreating the logo look using pure typography and gradients */
+        .hero {
+            background: radial-gradient(circle, rgba(252,251,250,1) 0%, rgba(234,230,225,1) 100%); /* Recreates the clean, warm stone plate texture */
+            border-bottom: 5px solid var(--primary-metallic);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle architectural graphic accents using CSS */
+        .hero::before {
+            content: "BCT";
+            position: absolute;
+            font-size: 280px;
+            font-weight: 900;
+            color: rgba(92, 58, 33, 0.03); /* Giant faint background emblem styling */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: -10px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* English Title styled with the Brushed Bronze gradient feel */
+        .hero h1 {
+            font-size: 54px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #5c3a21 0%, #8c6239 50%, #4a2f1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+        
+        .hero-subtitle-en {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-bronze);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            border-bottom: 2px solid rgba(140, 98, 57, 0.2);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Arabic Main Title styled to look exactly like the cast metal plate */
+        .hero .ar-main-title {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4a2f1b;
+            letter-spacing: 0;
+        }
+        
+        .hero .ar-sub-title {
+            font-size: 22px;
+            color: var(--accent-bronze);
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        .hero p.tagline {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #555;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-bronze) 0%, var(--primary-metallic) 100%);
+            color: #fff;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(92, 58, 33, 0.2);
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(92, 58, 33, 0.3);
+        }
+
+        /* Services Grid Section */
+        .services {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 32px;
+            color: var(--dark-charcoal);
+            margin-bottom: 10px;
+        }
+        .section-subtitle-ar {
+            font-size: 24px;
+            color: var(--accent-bronze);
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--accent-bronze);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-metallic);
+            font-size: 22px;
+        }
+        .service-card h4 {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        /* About & Leadership Section */
+        .about-section {
+            background-color: var(--light-cream);
+            padding: 80px 20px;
+        }
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        /* Contact Details Section */
+        .contact {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .contact-info {
+            margin-top: 30px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .contact-item {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        /* Footer Element */
+        footer {
+            background-color: var(--dark-charcoal);
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            border-top: 4px solid var(--primary-metallic);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Clean Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-section">
+                <span class="en-logo">BCT</span>
+                <span class="ar-logo">شركة بيان للمقاولات</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Designed completely in CSS to look like the logo branding layout -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bayan</h1>
+            <div class="hero-subtitle-en">Contracting & Trading</div>
+            
+            <h2 class="ar-main-title">شركة بيان للمقاولات و التجارة</h2>
+            <h3 class="ar-sub-title">المهندس أحمد نبيل و شركاه</h3>
+            
+            <p class="tagline">Delivering high-quality structural execution, general contracting solutions, and commercial trading excellence across regions.</p>
+            <a href="#contact" class="cta-btn">Get In Touch / اتصل بنا</a>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Capabilities</h2>
+        <h3 class="section-subtitle-ar">خدماتنا</h3>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>General Contracting</h3>
+                <h4>المقاولات العامة</h4>
+                <p>Full-scale management and structural engineering execution for infrastructure and commercial development projects.</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Trading</h3>
+                <h4>التجارة والتوريدات</h4>
+                <p>Strategic sourcing, supply-chain logistics, and premium material provisioning for industrial and construction demands.</p>
+            </div>
+            <div class="service-card">
+                <h3>Engineering Advisory</h3>
+                <h4>الاستشارات الهندسية</h4>
+                <p>Precise project planning, structural assessments, and blueprint evaluation overseen by industry experts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Leadership Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title">Corporate Profile</h2>
+            <h3 class="section-subtitle-ar">نبذة عن الشركة</h3>
+            <p><strong>Bayan Contracting & Trading (BCT)</strong> builds on a foundation of reliability and precision engineering. Under the structural vision and leadership of <strong>Eng. Ahmed Nabil</strong>, the firm executes complex engineering briefs and commercial trade pipelines with strict adherence to timeline, safety, and modern material specifications.</p>
+        </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Connect With Us</h2>
+        <h3 class="section-subtitle-ar">تواصل معنا</h3>
+        <div class="contact-info">
+            <div class="contact-item"><strong>Email:</strong> info@bayan-ct.com</div>
+            <div class="contact-item"><strong>Headquarters:</strong> Alexandria, Egypt</div>
+            <div class="contact-item"><strong>Business Inquiries:</strong> +20 XXX XXX XXXX</div>
+        </div>
+    </section>
+
+    <!-- Footer Element -->
+    <footer>
+        <p>&copy; 2026 Bayan Contracting & Trading. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
