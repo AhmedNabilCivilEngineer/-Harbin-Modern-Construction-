@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbin Modern Construction | Headquarters & Leadership</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #eef1f5;
+            color: #1a202c;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 48px auto;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Header */
+        header {
+            background: #111827;
+            color: #ffffff;
+            padding: 36px 40px;
+            border-bottom: 4px solid #1e3a5f;
+        }
+
+        header h1 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        header .subtitle {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #9ca3af;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        /* Location Card */
+        .location-card {
+            padding: 4px 0;
+        }
+
+        .location-address {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .location-details {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
+
+        /* Hierarchy Table */
+        .hierarchy-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hierarchy-table tr {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .hierarchy-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hierarchy-table td {
+            padding: 14px 0;
+            vertical-align: middle;
+        }
+
+        .hierarchy-table .position {
+            font-weight: 500;
+            color: #374151;
+            width: 55%;
+        }
+
+        .hierarchy-table .name {
+            font-weight: 600;
+            color: #111827;
+            text-align: right;
+        }
+
+        /* Footer */
+        footer {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            padding: 18px 40px;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
+
+            header, .content, footer {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            header {
+                padding-top: 28px;
+                padding-bottom: 28px;
+            }
+
+            .hierarchy-table .position,
+            .hierarchy-table .name {
+                display: block;
+                text-align: left;
+                width: 100%;
+            }
+
+            .hierarchy-table .name {
+                margin-top: 2px;
+                color: #1e40af;
+            }
+
+            .hierarchy-table td {
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Harbin Modern Construction</h1>
+            <div class="subtitle">Headquarters &amp; Leadership</div>
+        </header>
+
+        <div class="content">
+            <!-- Headquarters -->
+            <div class="section">
+                <h2 class="section-title">Headquarters</h2>
+                <div class="location-card">
+                    <div class="location-address">28 El-Naqeeb Sherif Ramzy Street</div>
+                    <div class="location-details">El-Hadra Qebli, Bab Sharq, Alexandria, Egypt</div>
+                </div>
+            </div>
+
+            <!-- Leadership -->
+            <div class="section">
+                <h2 class="section-title">Leadership Structure</h2>
+                <table class="hierarchy-table">
+                    <tr>
+                        <td class="position">Founder &amp; General Manager</td>
+                        <td class="name">Eng. Ahmed Nabil, GMICE</td>
+                    </tr>
+                    <tr>
+                        <td class="position">Chief Executive Officer</td>
+                        <td class="name">Eng. Nabil Hassan</td>
+                    </tr>
+                    <tr>
+                        <td class="position">Co-Founder</td>
+                        <td class="name">Eng. Youssef Nabil</td>
+                    </tr>
+                    <tr>
+                        <td class="position">Co-Founder</td>
+                        <td class="name">Eng. Noha Samir Alhaddad</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 Harbin Modern Construction. All Rights Reserved.
+        </footer>
+    </div>
+</body>
+</html>
